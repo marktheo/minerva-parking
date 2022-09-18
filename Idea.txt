@@ -1,0 +1,25 @@
+[Idea]
+Project Name: Marktheo
+Purpose: Organization
+
+[Features]
+Dashboard: Checklist
+Schedule: Week Calendar
+Calendar: Year Calendar
+About: Product
+
+[Benefits]
+Strecth your productivity to the maximum
+Increase your workflow and performance
+Customize it to your preference
+Totally free
+
+[Features]
+Personalized checklist for your goals
+Dinamic calendar for your week schedule
+Full calendar for annual organization
+Customizable colors and icons
+Safe and reliable database
+
+[Author]
+© 2022 Marcos Vinícius Theodoro - All rights reserved.
