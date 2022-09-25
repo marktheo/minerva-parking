@@ -6,9 +6,10 @@ body{
     background-repeat: no-repeat;
     background-position: fixed;
     background-size: initial;
-    
     text-align: center;
 }
+
+/* ---- Navigation Bar ---- */
 
 .nav{
     /*Font*/
@@ -65,7 +66,6 @@ body{
     /*Font*/
     color: white;
 
-
     /*Background*/
     background-image: linear-gradient(135deg, #2D3047, #93B7BE);
 
@@ -79,12 +79,14 @@ body{
     align-items: center;
 }
 
+/* ---- Product ---- */
+
 .product{
     /*Font*/
     color: white;
     
     /*Dimensions*/
-    margin: 300px auto 0px;
+    margin: 42.5vh 0px;
     width: 100%;
 
     /*Spacing*/
@@ -128,6 +130,8 @@ body{
     display: flex;
     align-items: center;
 }
+
+/* ---- Features ---- */
 
 .features{
     /*Background*/
@@ -253,8 +257,11 @@ body{
     align-items: center;
 }
 
+/* ---- Footer ---- */
+
 .footer{
     /*Background*/
+    background-color: white;
     box-shadow: 1.5px 1.5px 6px rgb(0,0,0, 0.20);
 
     /*Dimensions*/
@@ -268,6 +275,8 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+/* ---- Media Query ---- */
 
 @media (min-height: 1800px){
     .footer{
