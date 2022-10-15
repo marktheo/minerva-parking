@@ -16,46 +16,43 @@
 	<body>
 		<!--Navigation Bar-->
 		<nav class="nav">
-			<img src="/static/Media/Logo.png" alt="logo_image" class="nav_logo">
-			<ul class="nav_ul">
-                <a class="nav_ul_link" href="/login">
+			<img src="/static/Media/Logo.png" alt="logo-image" class="nav__logo">
+			<ul class="nav__content">
+                <a class="nav__content__link" href="/login">
 					<span class="material-symbols-rounded">space_dashboard</span>
-					<span class="nav_ul_link_text">Dashboard</span>
+					<span class="nav__content__link__text">Dashboard</span>
 				</a>
-                <a class="nav_ul_link" href="/login">
+                <a class="nav__content__link" href="/login">
 					<span class="material-symbols-rounded">analytics</span>
-					<span class="nav_ul_link_text">Analytics</span>
+					<span class="nav__content__link__text">Analytics</span>
 				</a>
-				<a class="nav_ul_link" href="/login">
+				<a class="nav__content__link" href="/login">
 					<span class="material-symbols-rounded">bike_scooter</span>
-					<span class="nav_ul_link_text">Vehicles</span>
+					<span class="nav__content__link__text">Vehicles</span>
 				</a>
-                <a class="nav_ul_link" href="/about">
+                <a class="nav__content__link" href="/about">
 					<span class="material-symbols-rounded">help</span>
-					<span class="nav_ul_link_text">About</span>
+					<span class="nav__content__link__text">About</span>
 				</a>
 			</ul>
-			<a class="nav_login" href="/register">Register</a>
+			<a class="nav__login" href="/register">Register</a>
 		</nav>
 
 		<!--Login Section-->
-		<div class="login">
-			<hr class="login_hr">
-			<form class="login_fields"  action="/userlogin" method="post">
-				<span class="login_fields_message">Welcome back</span>
-				<div class="login_field">
-					<span class="material-symbols-rounded">person</span>
-					<input class="login_field_input" type="text" name="username" placeholder="Username">
-				</div>
-				<div class="login_field">
-					<span class="material-symbols-rounded">pin</span>
-					<input class="login_field_input" type="password" name="password" placeholder="Password">
-				</div>
-				<span class="login_message">{{erro}}</span>
-				<input class="login_field_submit" type="submit" value="Login">
-				<a class="login_create" href="/register">Create an account</a>
-			</form>
-		</div>
+		<form class="login"  action="/userlogin" method="post">
+			<span class="login__title">Welcome back</span>
+			<div class="login__content">
+				<span class="material-symbols-rounded">person</span>
+				<input class="login__content__input" type="text" name="username" placeholder="Username">
+			</div>
+			<div class="login__content">
+				<span class="material-symbols-rounded">pin</span>
+				<input class="login__content__input" type="password" name="password" placeholder="Password">
+			</div>
+			<span class="login__error">{{erro}}</span>
+			<input class="login__content__submit" type="submit" value="Login">
+			<a class="login__new" href="/register">Create an account</a>
+		</form>
 
 		<!--Footer of the Page-->
 		<footer class="footer">
