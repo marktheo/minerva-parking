@@ -1,4 +1,8 @@
-from flask import Flask, request, render_template
+import sqlite3
+
+sql = sqlite3.connect("database.db").cursor()
+
+from flask import Flask, request, render_template 
 
 app = Flask(__name__)
 
@@ -13,6 +17,16 @@ def register():
 @app.route("/login")
 def login():
     return render_template("Login.html")
+
+@app.route("/userlogin", methods = ["POST"])
+def userlogin():
+    if request.method == "POST":
+        username = request.form["username"]
+        password = request.form["password"]
+        return userlogin(username, password)
+    else:
+        return render_template("Login.html", errormessage = "Error 404")
+        
 
 @app.route("/dashboard")
 def dashboard():

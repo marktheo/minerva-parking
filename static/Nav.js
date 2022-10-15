@@ -1,6 +1,5 @@
 const nav = document.querySelector(".nav");
-const nav_img = document.querySelector(".nav_logo");
-const nav_link = document.querySelectorAll(".nav_ul_link");
+const nav_link = document.querySelectorAll(".nav__content__link");
 
 setInterval(function() {
     if(window.scrollY > 0){

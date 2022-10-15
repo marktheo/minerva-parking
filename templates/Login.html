@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<!--Head of the Page-->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+		<link rel="shortcut icon" href="/static/Media/Favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="/static/Norm.css">
+		<link rel="stylesheet" href="/static/Login.css">
+		<title>Minerva Parking</title>
+	</head>
+
+	<!--Body of the Page-->
+	<body>
+		<!--Navigation Bar-->
+		<nav class="nav">
+			<img src="/static/Media/Logo.png" alt="logo_image" class="nav_logo">
+			<ul class="nav_ul">
+                <a class="nav_ul_link" href="/login">
+					<span class="material-symbols-rounded">space_dashboard</span>
+					<span class="nav_ul_link_text">Dashboard</span>
+				</a>
+                <a class="nav_ul_link" href="/login">
+					<span class="material-symbols-rounded">analytics</span>
+					<span class="nav_ul_link_text">Analytics</span>
+				</a>
+				<a class="nav_ul_link" href="/login">
+					<span class="material-symbols-rounded">bike_scooter</span>
+					<span class="nav_ul_link_text">Vehicles</span>
+				</a>
+                <a class="nav_ul_link" href="/about">
+					<span class="material-symbols-rounded">help</span>
+					<span class="nav_ul_link_text">About</span>
+				</a>
+			</ul>
+			<a class="nav_login" href="/register">Register</a>
+		</nav>
+
+		<!--Login Section-->
+		<div class="login">
+			<hr class="login_hr">
+			<form class="login_fields"  action="/userlogin" method="post">
+				<span class="login_fields_message">Welcome back</span>
+				<div class="login_field">
+					<span class="material-symbols-rounded">person</span>
+					<input class="login_field_input" type="text" name="username" placeholder="Username">
+				</div>
+				<div class="login_field">
+					<span class="material-symbols-rounded">pin</span>
+					<input class="login_field_input" type="password" name="password" placeholder="Password">
+				</div>
+				<span class="login_message">{{erro}}</span>
+				<input class="login_field_submit" type="submit" value="Login">
+				<a class="login_create" href="/register">Create an account</a>
+			</form>
+		</div>
+
+		<!--Footer of the Page-->
+		<footer class="footer">
+			<span class="author">© 2022 Minerva Parking - All rights reserved.</span>
+		</footer>
+    </body>
+</html>
