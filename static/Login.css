@@ -206,10 +206,6 @@ body{
 }
 
 @media (max-width: 500px){
-    :root{
-        --spc: calc(50vh - 190px + 6px)
-    }
-
     .nav{
         padding: 32px 32px;
         width: calc(100% - 64px);
@@ -222,5 +218,11 @@ body{
 
     .footer{
         font-size: .7em;
+    }
+}
+
+@media only screen and (hover: none) and (pointer: coarse){
+    :root{
+        --spc: calc(50vh - 190px + 6px)
     }
 }
