@@ -1,6 +1,6 @@
 /* ---- Varables ---- */
 :root{
-    --spc: calc(50vh - 227px - 56px - 24px + 112px)
+    --spc: calc(50vh - 227px + 32px)
 }
 
 
@@ -13,7 +13,7 @@ body{
     background-size: auto;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: calc(100vh - 100%);
 }
 
 
@@ -207,7 +207,7 @@ body{
 
 @media (max-width: 500px){
     :root{
-        --spc: calc(50vh - 250px - 56px - 24px + 112px)
+        --spc: calc(50vh - 250px + 6px)
     }
 
     .nav{
