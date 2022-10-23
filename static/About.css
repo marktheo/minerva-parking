@@ -48,7 +48,7 @@
 /* ---- Product ---- */
 .product{
     align-items: center;
-    background-image: url("Media/Background.png");
+    background-image: url("media/Background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
