@@ -96,3 +96,13 @@ body{
         padding: 32px 10px;
     }
 }
+
+@media only screen and (hover: none) and (pointer: coarse){
+    body{
+        min-height: calc(100vh - 60px);
+    }
+
+    .main{
+        height: calc(100vh - 60px);
+    }
+}
