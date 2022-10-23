@@ -3,19 +3,20 @@ from flask import Flask, request, render_template
 #Flask Instance - Init
 app = Flask(__name__)
 
-#Main Page - About
+#About Page
 @app.route("/")
 def about():
     return render_template("About.html")
 
-#Secondary Page - Register
+#Register Page
 @app.route("/register")
 def register():
     return render_template("Register.html")
 
-#Secondary Page - Login
+#LoginPage
 @app.route("/login")
 def login():
     return render_template("Login.html")
 
+#Runs the Application
 app.run()

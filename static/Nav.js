@@ -1,6 +1,7 @@
 const nav = document.querySelector(".nav");
 const nav_link = document.querySelectorAll(".nav__content__link");
 
+//Verifies if the user has scrolled the page
 setInterval(function() {
     if(window.scrollY > 0){
         nav_link[0].style.color = "black";

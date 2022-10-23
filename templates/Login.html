@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-	<!--Head of the Page-->
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,51 +10,22 @@
 		<link rel="stylesheet" href="/static/Login.css">
 		<title>Minerva Parking</title>
 	</head>
-
-	<!--Body of the Page-->
 	<body>
-		<!--Navigation Bar-->
-		<nav class="nav">
-			<img src="/static/Media/Logo.png" alt="logo-image" class="nav__logo">
-			<ul class="nav__content">
-				<a class="nav__content__link" href="/login">
-					<span class="material-symbols-rounded">space_dashboard</span>
-					<span class="nav__content__link__text">Dashboard</span>
-				</a>
-				<a class="nav__content__link" href="/login">
-					<span class="material-symbols-rounded">analytics</span>
-					<span class="nav__content__link__text">Analytics</span>
-				</a>
-				<a class="nav__content__link" href="/login">
-					<span class="material-symbols-rounded">bike_scooter</span>
-					<span class="nav__content__link__text">Vehicles</span>
-				</a>
-				<a class="nav__content__link" href="/">
-					<span class="material-symbols-rounded">help</span>
-					<span class="nav__content__link__text">About</span>
-				</a>
-			</ul>
-			<a class="nav__link" href="/register">Register</a>
-		</nav>
-
-		<!--Login Section-->
-		<form class="login"  action="/userlogin" method="post">
-			<span class="login__title">Sign In</span>
-			<div class="login__content">
-				<span class="material-symbols-rounded">alternate_email</span>
-				<input class="login__content__input" type="text" name="email" placeholder="Email Adress">
-			</div>
-			<div class="login__content">
-				<span class="material-symbols-rounded">pin</span>
-				<input class="login__content__input" type="password" name="password" placeholder="Password">
-			</div>
-			<input class="login__content__submit" type="submit" value="Login">
-			<a class="login__new" href="/register">Create an account</a>
-		</form>
-
-		<!--Footer of the Page-->
-		<footer class="footer">
-			<span class="author">© 2022 Minerva Parking - All rights reserved.</span>
-		</footer>
+		<main class="main">
+			<form class="login"  action="/userlogin" method="post">
+				<span class="login__title">Sign In</span>
+				<div class="login__content">
+					<span class="material-symbols-rounded">alternate_email</span>
+					<input class="login__content__input js--input" type="text" name="email" placeholder="Email Adress" maxlength="50">
+				</div>
+				<div class="login__content">
+					<span class="material-symbols-rounded">pin</span>
+					<input class="login__content__input js--input" type="password" name="password" placeholder="Password" maxlength="50">
+				</div>
+				<input class="login__content__submit js--submit" type="submit" value="Login" disabled="true">
+				<a class="login__new" href="/register">Create an account</a>
+			</form>
+		</main>
+		<script src="/static/Login.js"></script>
 	</body>
 </html>
