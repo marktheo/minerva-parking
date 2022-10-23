@@ -24,6 +24,6 @@ def selectUser(email, password):
     for row in rows:
         if(row[3] == email and row[4] == password):
             user = User(row[0], row[1], row[2], row[3], row[4])
-            return user
+            return True
 
     return False

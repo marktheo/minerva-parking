@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 #About Page
 @app.route("/")
-def about(usern):
-    return render_template("About.html", usernn = usern)
+def about():
+    return render_template("About.html")
 
 #Register Page
 @app.route("/register")
@@ -38,10 +38,8 @@ def loginUser():
     email = request.form["email"]
     password = request.form["password"]
 
-    user = selectUser(email, password)
-
-    if(user != False):
-        return about(user.getName())
+    if(selectUser(email, password) == True):
+        return about()
     else:
         return login()
 
