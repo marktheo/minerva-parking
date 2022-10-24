@@ -1,10 +1,11 @@
 class User():
-    def __init__(self, id, name, phone, email, password):
+    def __init__(self, id, name, phone, email, password, state):
         self.id = id
         self.name = name
         self.phone = phone
         self.email = email
         self.password = password
+        self.state = state
 
     def getId(self):
         return self.id
@@ -36,3 +37,8 @@ class User():
     def setPassword(self, password):
         self.password = password
 
+    def getState(self):
+        return self.state
+
+    def setState(self, state):
+        self.state = state

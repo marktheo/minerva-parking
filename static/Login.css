@@ -89,19 +89,27 @@ body{
 
 
 /* ---- Media Query ---- */
-@media (max-width: 500px){
-    .login{
-        width: calc(100% - 32px);
-        padding: 32px 10px;
+@media only screen and (hover: none) and (pointer: coarse){
+    body{
+        min-height: calc(100vh - 120px);
+    }
+
+    .main{
+        height: calc(100vh - 120px);
     }
 }
 
-@media only screen and (hover: none) and (pointer: coarse){
+@media only screen and (hover: none) and (pointer: coarse) and (max-width: 500px){
     body{
         min-height: calc(100vh - 60px);
     }
 
     .main{
         height: calc(100vh - 60px);
+    }
+
+    .login{
+        width: calc(100% - 32px);
+        padding: 32px 10px;
     }
 }

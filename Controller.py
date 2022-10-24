@@ -1,4 +1,6 @@
 import sqlite3
+import qrcode
+import PIL
 from Model import User
 from CreateDB import connection, sql
 
@@ -23,7 +25,12 @@ def selectUser(email, password):
 
     for row in rows:
         if(row[3] == email and row[4] == password):
-            user = User(row[0], row[1], row[2], row[3], row[4])
-            return True
+            user = User(row[0], row[1], row[2], row[3], row[4], True)
+            return user
 
     return False
+
+def userQrcode(user):
+    card = 'BEGIN:VCARD\r\nVERSION:3.0\r\nFN:'+user.getName()+'\r\nTEL;TYPE=Telefone:'+user.getPhone()+'\r\nEMAIL;TYPE=E-mail:'+user.getEmail()+'\r\nEND:VCARD\r\n'
+    image = qrcode.make(card)
+    image.save("./static/media/Qrcode"+str(user.getId())+".jpeg")

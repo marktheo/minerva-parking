@@ -1,5 +1,7 @@
 from flask import Flask, request, render_template
-from Controller import insertUser, selectUser, User
+from Controller import insertUser, selectUser, userQrcode
+
+user = None
 
 #Flask Instance - Init
 app = Flask(__name__)
@@ -38,10 +40,16 @@ def loginUser():
     email = request.form["email"]
     password = request.form["password"]
 
-    if(selectUser(email, password) == True):
-        return about()
+    user = selectUser(email, password)
+
+    if(user != False):
+        return qrCode(user)
     else:
         return login()
 
-#Runs the Application
+@app.route("/qrCode")
+def qrCode(user):
+    userQrcode(user)
+    return render_template("Qrcode.html", id = str(user.getId()))
+
 app.run()
