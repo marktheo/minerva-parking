@@ -43,13 +43,15 @@ def loginUser():
     user = selectUser(email, password)
 
     if(user != False):
-        return qrCode(user)
+        return dashboard(user)
     else:
         return login()
 
-@app.route("/qrCode")
-def qrCode(user):
-    userQrcode(user)
-    return render_template("Qrcode.html", id = str(user.getId()))
+@app.route("/dashboard")
+def dashboard(user):
+    if(user):
+        return render_template("Dashboard.html", user = user)
+    else:
+        return render_template("Login.html")
 
 app.run()
