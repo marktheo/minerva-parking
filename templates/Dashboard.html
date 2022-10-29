@@ -41,15 +41,15 @@
 					<span class="profile__content__div__title">Profile</span>
 					<div class="profile__content__div__field">
 						<span class="material-symbols-rounded">person</span>
-						<span class="profile__content__div__span">Marcos Vinícius Theodoro</span>
+						<span class="profile__content__div__span">{{client.getName()}}</span>
 					</div>
 					<div class="profile__content__div__field">
 						<span class="material-symbols-rounded">call</span>
-						<span class="profile__content__div__span">21 971162899</span>
+						<span class="profile__content__div__span">{{client.getPhone()}}</span>
 					</div>
 					<div class="profile__content__div__field">
 						<span class="material-symbols-rounded">alternate_email</span>
-						<span class="profile__content__div__span">marcosvinytheo@gmail.com</span>
+						<span class="profile__content__div__span">{{client.getEmail()}}</span>
 					</div>
 					<div class="profile__content__div__field">
 						<span class="material-symbols-rounded">pin_drop</span>
@@ -75,19 +75,19 @@
 					<span class="profile__content__div__title">Vehicle</span>
 					<div class="profile__content__div__field">
 						<span class="material-symbols-rounded">domain_add</span>
-						<span class="profile__content__div__span">Chevrolet</span>
+						<span class="profile__content__div__span">{{vehicle.getBrand()}}</span>
 					</div>
 					<div class="profile__content__div__field">
 						<span class="material-symbols-rounded">transportation</span>
-						<span class="profile__content__div__span">Agile</span>
+						<span class="profile__content__div__span">{{vehicle.getModel()}}</span>
 					</div>
 					<div class="profile__content__div__field">
 						<span class="material-symbols-rounded">format_paint</span>
-						<span class="profile__content__div__span">Silver</span>
+						<span class="profile__content__div__span">{{vehicle.getColor()}}</span>
 					</div>
 					<div class="profile__content__div__field">
 						<span class="material-symbols-rounded">pin</span>
-						<span class="profile__content__div__span">KPA-4050</span>
+						<span class="profile__content__div__span">{{vehicle.getPlate()}}</span>
 					</div>
 				</div>
 			</div>

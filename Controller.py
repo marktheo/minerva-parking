@@ -99,21 +99,19 @@ def logClient(id):
         sql = connection.cursor()
         rows = sql.execute('SELECT * FROM client WHERE id=?', (str(id))).fetchall()
 
-        for row in rows:
-            client.setId(row[0])
-            client.setName(row[1])
-            client.setPhone(row[2])
-            client.setEmail(row[3])
-            client.setPassword(row[4])
-            client.setState(True)
+        client.setId(rows[0][0])
+        client.setName(rows[0][1])
+        client.setPhone(rows[0][2])
+        client.setEmail(rows[0][3])
+        client.setPassword(rows[0][4])
+        client.setState(True)
 
         rows = sql.execute('SELECT * FROM vehicle WHERE id=?', (str(id))).fetchall()
 
-        for row in rows:
-            vehicle.setBrand(row[1])
-            vehicle.setModel(row[2])
-            vehicle.setColor(row[3])
-            vehicle.setPlate(row[4])
+        vehicle.setBrand(rows[0][1])
+        vehicle.setModel(rows[0][2])
+        vehicle.setColor(rows[0][3])
+        vehicle.setPlate(rows[0][4])
     
     except Exception as e:
         print(e)
