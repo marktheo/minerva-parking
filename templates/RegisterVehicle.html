@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="/static/media/Favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+		<link rel="stylesheet" href="/static/Register.css">
+		<link rel="stylesheet" href="/static/Norm.css">
+		<title>Minerva Parking</title>
+	</head>
+	<body>
+		<main class="main">
+			<form class="register"  action="/register__" method="post">
+				<span class="register__title">Vehicle</span>
+				<div class="register__content">
+					<span class="material-symbols-rounded">domain_add</span>
+					<input class="register__content__input js--input" type="text" name="brand" placeholder="Brand" maxlength="30">
+				</div>
+				<div class="register__content">
+					<span class="material-symbols-rounded">transportation</span>
+					<input class="register__content__input js--input" type="text" name="model" placeholder="Model" maxlength="40">
+				</div>
+				<div class="register__content">
+					<span class="material-symbols-rounded">format_paint</span>
+					<input class="register__content__input js--input" type="text" name="color" placeholder="Color" maxlength="20">
+				</div>
+				<div class="register__content">
+					<span class="material-symbols-rounded">pin</span>
+					<input class="register__content__input js--input" type="text" name="plate" placeholder="License Plate" maxlength="15">
+				</div>
+				<input class="register__content__submit js--submit" type="submit" value="Register" disabled="true">
+				<a class="register__new" href="/login">Already have an account?</a>
+			</form>
+		</main>
+		<script src="/static/Register.js"></script>
+	</body>
+</html>

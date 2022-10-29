@@ -5,10 +5,10 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 		<link rel="shortcut icon" href="/static/media/Favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+		<link rel="stylesheet" href="/static/Dashboard.css">
 		<link rel="stylesheet" href="/static/Norm.css">
-		<link rel="stylesheet" href="/static/About.css">
 		<title>Minerva Parking</title>
 	</head>
 
@@ -22,10 +22,6 @@
 					<span class="material-symbols-rounded">space_dashboard</span>
 					<span class="nav__content__link__text">Dashboard</span>
 				</a>
-				<a class="nav__content__link" href="/login">
-					<span class="material-symbols-rounded">bike_scooter</span>
-					<span class="nav__content__link__text">Vehicles</span>
-				</a>
 				<a class="nav__content__link" href="/">
 					<span class="material-symbols-rounded">help</span>
 					<span class="nav__content__link__text">About</span>
@@ -34,46 +30,83 @@
 			<a class="nav__link" href="/login">Login</a>
 		</nav>
 
-		<!--About the Product-->
-		<div class="product">
-			<span class="product__title">Experience parking as never before</span>
-			<div class="product__content">
-				<span class="material-symbols-rounded">share_location</span>
-				<span class="product__content__span">Track your vehicle wherever it is.</span>
+		<!--Profile Information-->
+		<div class="profile">
+			<span class="profile__title">Monitor your Information</span>
+			<hr class="profile__title--hr">
+
+			<hr class="profile__hr">
+			<div class="profile__content">
+				<div class="profile__content__div">
+					<span class="profile__content__div__title">Profile</span>
+					<div class="profile__content__div__field">
+						<span class="material-symbols-rounded">person</span>
+						<span class="profile__content__div__span">Marcos Vinícius Theodoro</span>
+					</div>
+					<div class="profile__content__div__field">
+						<span class="material-symbols-rounded">call</span>
+						<span class="profile__content__div__span">21 971162899</span>
+					</div>
+					<div class="profile__content__div__field">
+						<span class="material-symbols-rounded">alternate_email</span>
+						<span class="profile__content__div__span">marcosvinytheo@gmail.com</span>
+					</div>
+					<div class="profile__content__div__field">
+						<span class="material-symbols-rounded">pin_drop</span>
+						<select class="profile__content__div__span">
+							<optgroup label="CCMN">
+								<option value="block">Interno</option>
+								<option value="block">Externo</option>
+							</optgroup>
+							<optgroup label="CT">
+								<option value="block">Bloco A</option>
+								<option value="block">Bloco B</option>
+								<option value="block">Bloco C</option>
+								<option value="block">Bloco D</option>
+								<option value="block">Bloco E</option>
+								<option value="block" selected >Bloco F</option>
+								<option value="block">Bloco G</option>
+								<option value="block">Bloco H</option>
+							</optgroup>
+						</select>
+					</div>
+				</div>
+				<div class="profile__content__div">
+					<span class="profile__content__div__title">Vehicle</span>
+					<div class="profile__content__div__field">
+						<span class="material-symbols-rounded">domain_add</span>
+						<span class="profile__content__div__span">Chevrolet</span>
+					</div>
+					<div class="profile__content__div__field">
+						<span class="material-symbols-rounded">transportation</span>
+						<span class="profile__content__div__span">Agile</span>
+					</div>
+					<div class="profile__content__div__field">
+						<span class="material-symbols-rounded">format_paint</span>
+						<span class="profile__content__div__span">Silver</span>
+					</div>
+					<div class="profile__content__div__field">
+						<span class="material-symbols-rounded">pin</span>
+						<span class="profile__content__div__span">KPA-4050</span>
+					</div>
+				</div>
 			</div>
-			<div class="product__content">
-				<span class="material-symbols-rounded">monitoring</span>
-				<span class="product__content__span">Monitor your data in real time.</span>
-			</div>
-			<a class="product__try" href="/login">Try it for free</a>
 		</div>
 
-		<!--About the Project Features-->
-		<div class="features">
-			<span class="features__title">More than just parking</span>
-			<hr class="features__title--hr">
+		<div class="image">
+			<span class="image__title">Profile QRCode</span>
+			<hr class="image__title--hr">
 
-			<hr class="features__hr">
-			<div class="features__content">
-				<span class="features__content__title">Invest in the safety of your vehicle</span>
-				<div class="features__content__div">
-					<span class="material-symbols-rounded">timer</span>
-					<span class="features__content__div__span">Full time operation.</span>
-				</div>
-				<div class="features__content__div">
-					<span class="material-symbols-rounded">speed</span>
-					<span class="features__content__div__span">Fast and dynamic parking.</span>
-				</div>
-				<div class="features__content__div">
-					<span class="material-symbols-rounded">credit_score</span>
-					<span class="features__content__div__span">Automatic billing available.</span>
-				</div>
-				<div class="features__content__div">
-					<span class="material-symbols-rounded">transportation</span>
-					<span class="features__content__div__span">Multiple vehicle registration.</span>
-				</div>
-				<a class="features__try" href="/login">Start now</a>
-			</div>
+			<hr class="image__hr">
+			<img src="/static/media/QRCode{{+client.getId()+'.jpeg'}}" alt="QRCode" class="image__content">
+		</div>
+
+		<div class="image">
+			<span class="image__title">Pix QRCode</span>
+			<hr class="image__title--hr">
+
+			<hr class="image__hr">
+			<img src="/static/media/QRCode{{+client.getId()+'.jpeg'}}" alt="QRCode" class="image__content">
 		</div>
 
 		<!--Footer of the Page-->

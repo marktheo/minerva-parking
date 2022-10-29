@@ -1,4 +1,4 @@
-class User():
+class Client():
     def __init__(self, id, name, phone, email, password, state):
         self.id = id
         self.name = name
@@ -8,7 +8,8 @@ class User():
         self.state = state
 
     def getId(self):
-        return self.id
+        
+        return str(self.id)
 
     def setId(self, id):
         self.id = id
@@ -42,3 +43,6 @@ class User():
 
     def setState(self, state):
         self.state = state
+
+
+client = Client(0, 'name', 'phone', 'email', 'password', False)
