@@ -16,19 +16,19 @@
 				<span class="register__title">Personal</span>
 				<div class="register__content">
 					<span class="material-symbols-rounded">person</span>
-					<input class="register__content__input js--input" type="text" name="name" placeholder="Full Name" maxlength="50">
+					<input class="register__content__input js--input" type="text" name="name" placeholder="Full Name" maxlength="50" required>
 				</div>
 				<div class="register__content">
 					<span class="material-symbols-rounded">call</span>
-					<input class="register__content__input js--input" type="tel" name="phone" placeholder="Phone Number" maxlength="14">
+					<input class="register__content__input js--input" type="tel" name="phone" placeholder="Phone Number" minlength="6" maxlength="20" required>
 				</div>
 				<div class="register__content">
 					<span class="material-symbols-rounded">alternate_email</span>
-					<input class="register__content__input js--input" type="email" name="email" placeholder="Email Adress" maxlength="50">
+					<input class="register__content__input js--input" type="email" name="email" placeholder="Email Adress" minlength="6" maxlength="50" required>
 				</div>
 				<div class="register__content">
 					<span class="material-symbols-rounded">pin</span>
-					<input class="register__content__input js--input" type="password" name="password" placeholder="Password" maxlength="50">
+					<input class="register__content__input js--input" type="password" name="password" placeholder="Password" minlength="6" maxlength="50" required>
 				</div>
 				<input class="register__content__submit js--submit" type="submit" value="Register" disabled="true">
 				<a class="register__new" href="/login">Already have an account?</a>

@@ -16,11 +16,11 @@
 				<span class="login__title">Sign In</span>
 				<div class="login__content">
 					<span class="material-symbols-rounded">alternate_email</span>
-					<input class="login__content__input js--input" type="email" name="email" placeholder="Email Adress" maxlength="50">
+					<input class="login__content__input js--input" type="email" name="email" placeholder="Email Adress" minlength="6" maxlength="50" required>
 				</div>
 				<div class="login__content">
 					<span class="material-symbols-rounded">pin</span>
-					<input class="login__content__input js--input" type="password" name="password" placeholder="Password" maxlength="50">
+					<input class="login__content__input js--input" type="password" name="password" placeholder="Password" minlength="6" maxlength="50" required>
 				</div>
 				<input class="login__content__submit js--submit" type="submit" value="Login" disabled="true">
 				<a class="login__new" href="/register">Create an account</a>
