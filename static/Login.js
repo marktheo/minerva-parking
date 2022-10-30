@@ -10,7 +10,7 @@ window.onload = function(){
 
 //Verifies if the email field is valid
 input[0].onkeyup = function(){
-    if(input[0].value.length == 0 || input[0].value.trim().length == 0 || input[0].value.length <= 5 || input[0].value.includes('@') == false){
+    if(input[0].value.length <= 5 || input[0].value.trim().length == 0 || input[0].value.includes('@') == false || input[0].value.toUpperCase().includes('INSERT') == true || input[0].value.toUpperCase().includes('SELECT')  || input[0].value.toUpperCase().includes('UPDATE') || input[0].value.toUpperCase().includes('DELETE')  || input[0].value.toUpperCase().includes('WHERE')  || input[0].value.toUpperCase().includes('FROM')){
         submit.style.backgroundImage = "linear-gradient(135deg, #000000, #E3E3E3)"
         input[0].style.borderBottom = "solid tomato 1.5px";
         submit.disabled = true;
@@ -23,7 +23,7 @@ input[0].onkeyup = function(){
 
 //Verifies if the password field is valid
 input[1].onkeyup = function(){
-    if(input[1].value.length == 0 || input[1].value.trim().length == 0){
+    if(input[1].value.length == 0 || input[1].value.trim().length == 0  || input[1].value.toUpperCase().includes('INSERT') == true || input[1].value.toUpperCase().includes('SELECT')  || input[1].value.toUpperCase().includes('UPDATE') || input[1].value.toUpperCase().includes('DELETE')  || input[1].value.toUpperCase().includes('WHERE')  || input[1].value.toUpperCase().includes('FROM')){
         submit.style.backgroundImage = "linear-gradient(135deg, #000000, #E3E3E3)"
         input[1].style.borderBottom = "solid tomato 1.5px";
         submit.disabled = true;
