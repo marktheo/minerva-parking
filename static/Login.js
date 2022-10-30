@@ -10,7 +10,7 @@ window.onload = function(){
 
 //Verifies if the email field is valid
 input[0].onkeyup = function(){
-    if(input[0].value.length == 0 || input[0].value.trim().length == 0){
+    if(input[0].value.length == 0 || input[0].value.trim().length == 0 || input[0].value.length <= 5 || input[0].value.includes('@') == false){
         submit.style.backgroundImage = "linear-gradient(135deg, #000000, #E3E3E3)"
         input[0].style.borderBottom = "solid tomato 1.5px";
         submit.disabled = true;

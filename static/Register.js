@@ -38,7 +38,7 @@ input[1].onkeyup = function(){
 
 //Verifies if the email field is valid
 input[2].onkeyup = function(){
-    if(input[2].value.length == 0 || input[2].value.trim().length == 0){
+    if(input[2].value.length == 0 || input[2].value.trim().length == 0 || input[2].value.length <= 5 || input[2].value.includes('@') == false){
         submit.style.backgroundImage = "linear-gradient(135deg, #000000, #E3E3E3)"
         input[2].style.borderBottom = "solid tomato 1.5px";
         submit.disabled = true;

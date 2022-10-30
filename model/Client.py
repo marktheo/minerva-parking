@@ -8,7 +8,6 @@ class Client():
         self.state = state
 
     def getId(self):
-        
         return str(self.id)
 
     def setId(self, id):
