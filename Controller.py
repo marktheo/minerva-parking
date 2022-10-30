@@ -8,7 +8,7 @@ def findClient(email):
     try:
         connection = sqlite3.connect('database.db')
         sql = connection.cursor()
-        sql.execute('CREATE TABLE IF NOT EXISTS client([id] INTEGER PRIMARY KEY AUTOINCREMENT, [name] TEXT, [phone] TEXT, [email] TEXT UNIQUE, [password] TEXT, [registered_in] TEXT DEFAULT CURRENT_TIMESTAMP);')
+        sql.execute('CREATE TABLE IF NOT EXISTS client([id] INTEGER PRIMARY KEY AUTOINCREMENT, [name] TEXT NOT NULL, [phone] TEXT NOT NULL, [email] TEXT UNIQUE, [password] TEXT NOT NULL, [registered_in] TEXT DEFAULT CURRENT_TIMESTAMP);')
         rows = sql.execute('SELECT * FROM client;').fetchall()
 
         for row in rows:
@@ -29,7 +29,7 @@ def findVehicle(plate):
     try:
         connection = sqlite3.connect('database.db')
         sql = connection.cursor()
-        sql.execute('CREATE TABLE IF NOT EXISTS vehicle([id] INTEGER PRIMARY KEY AUTOINCREMENT, [brand] TEXT, [model] TEXT, [color] TEXT, [plate] TEXT UNIQUE, [registered_in] TEXT DEFAULT CURRENT_TIMESTAMP);')
+        sql.execute('CREATE TABLE IF NOT EXISTS vehicle([id] INTEGER PRIMARY KEY AUTOINCREMENT, [brand] TEXT NOT NULL, [model] TEXT NOT NULL, [color] TEXT NOT NULL, [plate] TEXT UNIQUE, [registered_in] TEXT DEFAULT CURRENT_TIMESTAMP);')
         rows = sql.execute('SELECT * FROM vehicle;').fetchall()
 
         for row in rows:
