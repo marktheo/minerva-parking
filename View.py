@@ -71,7 +71,7 @@ def loginUser():
         clientQrcode(client)
         return dashboard(client.getState())
     else:
-        return render_template("Dashboard.html")
+        return render_template("Login.html")
 
 #Dashboard Page
 @app.route("/dashboard")
