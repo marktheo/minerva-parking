@@ -6,7 +6,7 @@ from model.Vehicle import vehicle
 #Verifies if the email exists.
 def findClient(email):
     try:
-        connection = sqlite3.connect('database.db')
+        connection = sqlite3.connect('DataBase.db')
         sql = connection.cursor()
         sql.execute('CREATE TABLE IF NOT EXISTS client([id] INTEGER PRIMARY KEY AUTOINCREMENT, [name] TEXT NOT NULL, [phone] TEXT NOT NULL, [email] TEXT UNIQUE, [password] TEXT NOT NULL, [registered_in] TEXT DEFAULT CURRENT_TIMESTAMP);')
         rows = sql.execute('SELECT * FROM client;').fetchall()
@@ -27,7 +27,7 @@ def findClient(email):
 #Verifies if the vehicle exists.
 def findVehicle(plate):
     try:
-        connection = sqlite3.connect('database.db')
+        connection = sqlite3.connect('DataBase.db')
         sql = connection.cursor()
         sql.execute('CREATE TABLE IF NOT EXISTS vehicle([id] INTEGER PRIMARY KEY AUTOINCREMENT, [brand] TEXT NOT NULL, [model] TEXT NOT NULL, [color] TEXT NOT NULL, [plate] TEXT UNIQUE, [registered_in] TEXT DEFAULT CURRENT_TIMESTAMP);')
         rows = sql.execute('SELECT * FROM vehicle;').fetchall()
